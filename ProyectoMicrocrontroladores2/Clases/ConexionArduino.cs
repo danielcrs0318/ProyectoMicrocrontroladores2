@@ -5,6 +5,7 @@ using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProyectoMicrocrontroladores2.Clases
 {
@@ -47,7 +48,7 @@ namespace ProyectoMicrocrontroladores2.Clases
             catch (Exception ex)
             {
                 // Manejar la excepción (opcionalmente puedes registrar errores)
-                Console.WriteLine("Error al recibir datos: " + ex.Message);
+                MessageBox.Show("Error al recibir datos: " + ex.Message);
             }
         }
 
