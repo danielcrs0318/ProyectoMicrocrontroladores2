@@ -19,7 +19,7 @@ namespace ProyectoMicrocrontroladores2.formularios
         public frmSensorHumedadSuelo()
         {
             InitializeComponent();
-            string cadenaConexion = "tu_cadena_de_conexion_aqui";
+            string cadenaConexion = "Server=localhost;Database=proyectoMicrocontroladores;User Id=Usuario;Password=Contraseña;";
             guardarDatos = new GuardarDatos(cadenaConexion);
             this.Load += new EventHandler(frmSensorHumedadSuelo_Load);
         }
