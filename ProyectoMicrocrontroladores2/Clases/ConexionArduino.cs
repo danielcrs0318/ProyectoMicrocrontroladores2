@@ -58,7 +58,7 @@ namespace ProyectoMicrocrontroladores2.Clases
             {
                 using (SqlConnection conexion = new SqlConnection(cadenaConexion))
                 {
-                    string consulta = "INSERT INTO SensorData (HumidityValue) VALUES (@valorSensor)";
+                    string consulta = "INSERT INTO SensorHumedad (HumidityValue) VALUES (@valorSensor)";
                     using (SqlCommand comando = new SqlCommand(consulta, conexion))
                     {
                         comando.Parameters.AddWithValue("@valorSensor", valorSensor);

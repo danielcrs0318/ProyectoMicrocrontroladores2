@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ConexionArduino.cs" />
+    <Compile Include="Clases\GuardarDatos.cs" />
     <Compile Include="formularios\frmSensorHumedadSuelo.cs">
       <SubType>Form</SubType>
     </Compile>

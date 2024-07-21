@@ -33,8 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvHumedadSuelo = new System.Windows.Forms.DataGridView();
-            this.btnconectar = new System.Windows.Forms.Button();
-            this.btnapagar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.cuadroTextoDatos = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
@@ -55,7 +53,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(59, 109);
+            this.label2.Location = new System.Drawing.Point(50, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 18);
             this.label2.TabIndex = 1;
@@ -65,9 +63,9 @@
             // 
             this.groupBox1.Controls.Add(this.dgvHumedadSuelo);
             this.groupBox1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 220);
+            this.groupBox1.Location = new System.Drawing.Point(12, 192);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(431, 262);
+            this.groupBox1.Size = new System.Drawing.Size(431, 290);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Guardados";
@@ -78,29 +76,8 @@
             this.dgvHumedadSuelo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHumedadSuelo.Location = new System.Drawing.Point(3, 21);
             this.dgvHumedadSuelo.Name = "dgvHumedadSuelo";
-            this.dgvHumedadSuelo.Size = new System.Drawing.Size(425, 238);
+            this.dgvHumedadSuelo.Size = new System.Drawing.Size(425, 266);
             this.dgvHumedadSuelo.TabIndex = 0;
-            // 
-            // btnconectar
-            // 
-            this.btnconectar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnconectar.Location = new System.Drawing.Point(84, 171);
-            this.btnconectar.Name = "btnconectar";
-            this.btnconectar.Size = new System.Drawing.Size(118, 32);
-            this.btnconectar.TabIndex = 4;
-            this.btnconectar.Text = "Conectar";
-            this.btnconectar.UseVisualStyleBackColor = true;
-            this.btnconectar.Click += new System.EventHandler(this.btnconectar_Click);
-            // 
-            // btnapagar
-            // 
-            this.btnapagar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnapagar.Location = new System.Drawing.Point(259, 171);
-            this.btnapagar.Name = "btnapagar";
-            this.btnapagar.Size = new System.Drawing.Size(118, 32);
-            this.btnapagar.TabIndex = 5;
-            this.btnapagar.Text = "Apagar";
-            this.btnapagar.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -116,9 +93,9 @@
             // cuadroTextoDatos
             // 
             this.cuadroTextoDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuadroTextoDatos.Location = new System.Drawing.Point(237, 107);
+            this.cuadroTextoDatos.Location = new System.Drawing.Point(228, 123);
             this.cuadroTextoDatos.Name = "cuadroTextoDatos";
-            this.cuadroTextoDatos.Size = new System.Drawing.Size(167, 22);
+            this.cuadroTextoDatos.Size = new System.Drawing.Size(194, 22);
             this.cuadroTextoDatos.TabIndex = 7;
             // 
             // frmSensorHumedadSuelo
@@ -129,8 +106,6 @@
             this.ClientSize = new System.Drawing.Size(455, 492);
             this.Controls.Add(this.cuadroTextoDatos);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnapagar);
-            this.Controls.Add(this.btnconectar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -152,8 +127,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvHumedadSuelo;
-        private System.Windows.Forms.Button btnconectar;
-        private System.Windows.Forms.Button btnapagar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox cuadroTextoDatos;
     }
