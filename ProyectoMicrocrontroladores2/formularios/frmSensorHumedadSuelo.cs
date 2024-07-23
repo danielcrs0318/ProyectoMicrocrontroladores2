@@ -17,12 +17,17 @@ namespace ProyectoMicrocrontroladores2.formularios
     {
         private GuardarDatos guardarDatos;
         private SerialPort _serialPort;
-        
+
+        private DataTable data;
+
 
         public frmSensorHumedadSuelo()
         {
             InitializeComponent();
             guardarDatos = new GuardarDatos();
+
+            Datagrid le = new Datagrid();
+            dgvHumedadSuelo.DataSource = le.ListaSensorHumedadSuelo;
         }
 
         private void button1_Click(object sender, EventArgs e)
