@@ -15,14 +15,12 @@ namespace ProyectoMicrocrontroladores2
     public partial class MenuPrincipal : Form
 
     {
-        private ConexionArduino arduinoConnection;
+        private ClaseConexion conexion;
         public MenuPrincipal()
         {
             InitializeComponent();
-            string cadenaConexion = "Server=localhost;Database=NombreBaseDatos;User Id=Usuario;Password=Contraseña;";
-            arduinoConnection = new ConexionArduino("COM3", 9600, cadenaConexion); // Cambia "COM3" por el puerto que esté usando tu Arduino
-            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuPrincipal_FormClosing);
+            conexion = new ClaseConexion();
+            conexion.Conectar();
         }
 
         private void sENSORHUMEDADDESUELOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,14 +36,10 @@ namespace ProyectoMicrocrontroladores2
             frmsensorhumedad.MdiParent = this;
             frmsensorhumedad.Show();
         }
+
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-            arduinoConnection.IniciarConexion();
-        }
 
-        private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            arduinoConnection.CerrarConexion();
         }
     }
 }

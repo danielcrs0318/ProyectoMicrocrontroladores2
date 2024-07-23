@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\ClaseConexion.cs" />
     <Compile Include="Clases\ConexionArduino.cs" />
     <Compile Include="Clases\GuardarDatos.cs" />
     <Compile Include="formularios\frmSensorHumedadSuelo.cs">

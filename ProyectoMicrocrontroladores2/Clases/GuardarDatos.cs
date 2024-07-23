@@ -4,39 +4,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using System.Windows.Forms;
 
 namespace ProyectoMicrocrontroladores2.Clases
 {
     internal class GuardarDatos
     {
-        private string cadenaConexion;
         public int DatoHumedad { get; set; }
 
-        public GuardarDatos(string cadenaConexion)
+
+        public GuardarDatos()
         {
-            this.cadenaConexion = cadenaConexion;
+            DatoHumedad = 0;
         }
 
-        public void GuardarDatosEnBaseDeDatos()
+        public GuardarDatos(int dato)
         {
-            try
+            DatoHumedad = dato; 
+        }
+        //metodo para que guarde los datos en la bdd
+        public void Guardar()
+        {
+            //validamos si el campo esta vacio 
+            if (DatoHumedad == 0)
             {
-                using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+                MessageBox.Show("No hay Dato de Humedad");
+            }
+            else
+            {
+                string sql = $"insert into SensorHumedad(ValorHumedad)" +
+                    $"values ({DatoHumedad});";
+                ClaseConexion c = new ClaseConexion();
+                if (c.Ejecutar(sql))
                 {
-                    string consulta = $"INSERT INTO SensorHumedad (ValorHumedad) VALUES {DatoHumedad}";
-                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
-                    {
-                        comando.Parameters.AddWithValue("DatoHumedad", DatoHumedad);
-                        conexion.Open();
-                        comando.ExecuteNonQuery();
-                    }
+                    MessageBox.Show("Registro Guardado");
+                }
+                else
+                {
+                    MessageBox.Show("Error al guardar el registro");
                 }
             }
-            catch (Exception ex)
-            {
-                // Manejar la excepción (opcionalmente puedes registrar errores)
-                Console.WriteLine("Error al guardar datos en la base de datos: " + ex.Message);
-            }
+
         }
     }
 }
