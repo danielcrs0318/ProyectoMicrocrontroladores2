@@ -91,5 +91,10 @@ namespace ProyectoMicrocrontroladores2.formularios
                 ClaseSensorMQ7.DatoCO = Convert.ToInt32(txtDatos.Text);
             }
         }
+
+        private void dgvMonoxido_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
