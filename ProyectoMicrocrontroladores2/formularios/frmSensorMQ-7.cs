@@ -25,7 +25,7 @@ namespace ProyectoMicrocrontroladores2.formularios
             ClaseSensorMQ7 = new ClaseSensorMQ7();
 
             Datagrid le = new Datagrid();
-            dgvMonoxido.DataSource = le.ListaSensorHumedadSuelo;
+            dgvMonoxido.DataSource = le.ListaSensorMQ7;
         }
 
         private void frmSensorMQ_7_Load(object sender, EventArgs e)

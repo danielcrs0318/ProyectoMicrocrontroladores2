@@ -28,7 +28,7 @@ namespace ProyectoMicrocrontroladores2.Clases
             //validamos si el campo esta vacio 
             if (DatoCO == 0)
             {
-                MessageBox.Show("No hay DatoS de CO");
+                MessageBox.Show("No hay Datos de CO");
             }
             else
             {

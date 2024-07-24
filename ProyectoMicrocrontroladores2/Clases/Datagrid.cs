@@ -10,7 +10,7 @@ namespace ProyectoMicrocrontroladores2.Clases
     public class Datagrid
     {
         private DataTable listaSensorHumedad;
-
+        private DataTable listaSensorMQ7;
        
 
         public Datagrid()
@@ -24,6 +24,10 @@ namespace ProyectoMicrocrontroladores2.Clases
         public DataTable ListaSensorHumedadSuelo
         {
             get { return listaSensorHumedad; }
+        }
+        public DataTable ListaSensorMQ7
+        {
+            get { return listaSensorMQ7; }
         }
     }
 }
