@@ -81,7 +81,7 @@
             // txtDatos
             // 
             this.txtDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDatos.Location = new System.Drawing.Point(290, 110);
+            this.txtDatos.Location = new System.Drawing.Point(336, 110);
             this.txtDatos.Margin = new System.Windows.Forms.Padding(4);
             this.txtDatos.Name = "txtDatos";
             this.txtDatos.Size = new System.Drawing.Size(293, 26);
@@ -92,7 +92,7 @@
             // 
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
-            this.btnExit.Location = new System.Drawing.Point(564, 5);
+            this.btnExit.Location = new System.Drawing.Point(609, 13);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(40, 39);
@@ -104,7 +104,7 @@
             // 
             this.groupBox1.Controls.Add(this.dgvMonoxido);
             this.groupBox1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 240);
+            this.groupBox1.Location = new System.Drawing.Point(53, 240);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -128,7 +128,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 114);
+            this.label2.Location = new System.Drawing.Point(30, 116);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(280, 22);
@@ -151,7 +151,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(611, 624);
+            this.ClientSize = new System.Drawing.Size(662, 651);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.BTNDESCONECTAR);
             this.Controls.Add(this.BTNCONECTAR);
