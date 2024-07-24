@@ -108,7 +108,7 @@ namespace ProyectoMicrocrontroladores2.formularios
 
         private void cuadroTextoDatos_TextChanged(object sender, EventArgs e)
         {
-            if (cuadroTextoDatos.Text == string.Empty)
+            if (cuadroTextoDatos.Text != string.Empty)
             {
                 guardarDatos.DatoHumedad = Convert.ToInt32(cuadroTextoDatos.Text);
             }
