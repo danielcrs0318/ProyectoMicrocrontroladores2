@@ -25,6 +25,8 @@ namespace ProyectoMicrocrontroladores2.formularios
             InitializeComponent();
             guardarDatos = new GuardarDatos();
             InitializeChart();
+            Datagrid dgv = new Datagrid();
+            dgvHumedadSuelo.DataSource = dgv.ListaSensorHumedadSuelo;
         }
 
         private void InitializeChart()
@@ -92,13 +94,27 @@ namespace ProyectoMicrocrontroladores2.formularios
                 string data = _serialPort.ReadLine();
                 // Usar Invoke para actualizar el TextBox en el hilo principal
                 this.Invoke(new MethodInvoker(delegate {
-                    cuadroTextoDatos.AppendText(data + Environment.NewLine);
+                    cuadroTextoDatos.Text =data;
+                    UpdateChart(data);
                 }));
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al recibir datos: {ex.Message}");
             }
+        }
+        /*private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            string data = _serialPort.ReadLine();
+            this.Invoke(new MethodInvoker(delegate
+            {
+                
+            }));
+        }*/
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            _serialPort.Close();
+            base.OnFormClosing(e);
         }
 
         private void button2_Click(object sender, EventArgs e)

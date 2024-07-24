@@ -52,9 +52,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(235, 26);
+            this.label1.Location = new System.Drawing.Point(313, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(377, 24);
+            this.label1.Size = new System.Drawing.Size(480, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "SENSOR DE HUMEDAD DE SUELO";
             // 
@@ -62,9 +63,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 89);
+            this.label2.Location = new System.Drawing.Point(61, 110);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 18);
+            this.label2.Size = new System.Drawing.Size(205, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Humedad del Suelo %:";
             // 
@@ -72,9 +74,11 @@
             // 
             this.groupBox1.Controls.Add(this.dgvHumedadSuelo);
             this.groupBox1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 192);
+            this.groupBox1.Location = new System.Drawing.Point(16, 236);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(431, 290);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(575, 357);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Guardados";
@@ -83,18 +87,21 @@
             // 
             this.dgvHumedadSuelo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHumedadSuelo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvHumedadSuelo.Location = new System.Drawing.Point(3, 21);
+            this.dgvHumedadSuelo.Location = new System.Drawing.Point(4, 26);
+            this.dgvHumedadSuelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvHumedadSuelo.Name = "dgvHumedadSuelo";
-            this.dgvHumedadSuelo.Size = new System.Drawing.Size(425, 266);
+            this.dgvHumedadSuelo.RowHeadersWidth = 51;
+            this.dgvHumedadSuelo.Size = new System.Drawing.Size(567, 327);
             this.dgvHumedadSuelo.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.Location = new System.Drawing.Point(823, 1);
+            this.button1.Location = new System.Drawing.Point(1097, 1);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 32);
+            this.button1.Size = new System.Drawing.Size(40, 39);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -102,18 +109,20 @@
             // cuadroTextoDatos
             // 
             this.cuadroTextoDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuadroTextoDatos.Location = new System.Drawing.Point(224, 87);
+            this.cuadroTextoDatos.Location = new System.Drawing.Point(299, 107);
+            this.cuadroTextoDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cuadroTextoDatos.Name = "cuadroTextoDatos";
-            this.cuadroTextoDatos.Size = new System.Drawing.Size(194, 22);
+            this.cuadroTextoDatos.Size = new System.Drawing.Size(257, 26);
             this.cuadroTextoDatos.TabIndex = 7;
             this.cuadroTextoDatos.TextChanged += new System.EventHandler(this.cuadroTextoDatos_TextChanged);
             // 
             // BTNCONECTAR
             // 
             this.BTNCONECTAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNCONECTAR.Location = new System.Drawing.Point(53, 128);
+            this.BTNCONECTAR.Location = new System.Drawing.Point(71, 158);
+            this.BTNCONECTAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNCONECTAR.Name = "BTNCONECTAR";
-            this.BTNCONECTAR.Size = new System.Drawing.Size(106, 43);
+            this.BTNCONECTAR.Size = new System.Drawing.Size(141, 53);
             this.BTNCONECTAR.TabIndex = 8;
             this.BTNCONECTAR.Text = "CONECTAR";
             this.BTNCONECTAR.UseVisualStyleBackColor = true;
@@ -122,9 +131,10 @@
             // BTNDESCONECTAR
             // 
             this.BTNDESCONECTAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNDESCONECTAR.Location = new System.Drawing.Point(305, 128);
+            this.BTNDESCONECTAR.Location = new System.Drawing.Point(407, 158);
+            this.BTNDESCONECTAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNDESCONECTAR.Name = "BTNDESCONECTAR";
-            this.BTNDESCONECTAR.Size = new System.Drawing.Size(135, 43);
+            this.BTNDESCONECTAR.Size = new System.Drawing.Size(180, 53);
             this.BTNDESCONECTAR.TabIndex = 9;
             this.BTNDESCONECTAR.Text = "DESCONECTAR";
             this.BTNDESCONECTAR.UseVisualStyleBackColor = true;
@@ -133,9 +143,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(179, 128);
+            this.button2.Location = new System.Drawing.Point(239, 158);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 43);
+            this.button2.Size = new System.Drawing.Size(141, 53);
             this.button2.TabIndex = 10;
             this.button2.Text = "GUARDAR";
             this.button2.UseVisualStyleBackColor = true;
@@ -148,28 +159,30 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(466, 87);
+            this.chart1.Location = new System.Drawing.Point(621, 107);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.LabelBackColor = System.Drawing.Color.Silver;
             series1.Legend = "Legend1";
             series1.Name = "Temperatura";
+            series1.YValueMembers = "100";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(376, 391);
+            this.chart1.Size = new System.Drawing.Size(501, 481);
             this.chart1.TabIndex = 11;
             this.chart1.Text = "chart1";
-            title1.Font = new System.Drawing.Font("News706 BT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             title1.Name = "Title1";
             title1.Text = "Datos Sensor Humedad del Suelo";
             this.chart1.Titles.Add(title1);
             // 
             // frmSensorHumedadSuelo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(855, 492);
+            this.ClientSize = new System.Drawing.Size(1140, 606);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.BTNDESCONECTAR);
@@ -180,6 +193,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmSensorHumedadSuelo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sensor Humedad de Suelo";
