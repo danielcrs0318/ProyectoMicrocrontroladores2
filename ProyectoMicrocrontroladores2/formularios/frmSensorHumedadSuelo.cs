@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO.Ports;
 using System.Data.SqlClient;
 using ProyectoMicrocrontroladores2.Clases;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ProyectoMicrocrontroladores2.formularios
 {
@@ -17,17 +18,31 @@ namespace ProyectoMicrocrontroladores2.formularios
     {
         private GuardarDatos guardarDatos;
         private SerialPort _serialPort;
-
-        private DataTable data;
-
+        
 
         public frmSensorHumedadSuelo()
         {
             InitializeComponent();
             guardarDatos = new GuardarDatos();
+            InitializeChart();
+        }
 
-            Datagrid le = new Datagrid();
-            dgvHumedadSuelo.DataSource = le.ListaSensorHumedadSuelo;
+        private void InitializeChart()
+        {
+            chart1.Series.Clear();
+            Series series = new Series("ArduinoData")
+            {
+                ChartType = SeriesChartType.Line
+            };
+            chart1.Series.Add(series);
+        }
+
+        private void UpdateChart(string data)
+        {
+            if (double.TryParse(data, out double value))
+            {
+                chart1.Series["ArduinoData"].Points.AddY(value);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -93,7 +108,7 @@ namespace ProyectoMicrocrontroladores2.formularios
 
         private void cuadroTextoDatos_TextChanged(object sender, EventArgs e)
         {
-            if (cuadroTextoDatos.Text != string.Empty)
+            if (cuadroTextoDatos.Text == string.Empty)
             {
                 guardarDatos.DatoHumedad = Convert.ToInt32(cuadroTextoDatos.Text);
             }
