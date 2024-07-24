@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClaseConexion.cs" />
+    <Compile Include="Clases\ClaseSensorMQ7.cs" />
     <Compile Include="Clases\ConexionArduino.cs" />
     <Compile Include="Clases\Datagrid.cs" />
     <Compile Include="Clases\GuardarDatos.cs" />
@@ -55,6 +56,12 @@
     </Compile>
     <Compile Include="formularios\frmSensorHumedadSuelo.Designer.cs">
       <DependentUpon>frmSensorHumedadSuelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frmSensorMQ-7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmSensorMQ-7.Designer.cs">
+      <DependentUpon>frmSensorMQ-7.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -66,6 +73,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="formularios\frmSensorHumedadSuelo.resx">
       <DependentUpon>frmSensorHumedadSuelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmSensorMQ-7.resx">
+      <DependentUpon>frmSensorMQ-7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
