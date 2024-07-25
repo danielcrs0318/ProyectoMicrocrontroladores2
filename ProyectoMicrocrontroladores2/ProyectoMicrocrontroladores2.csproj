@@ -51,6 +51,7 @@
     <Compile Include="Clases\ConexionArduino.cs" />
     <Compile Include="Clases\Datagrid.cs" />
     <Compile Include="Clases\GuardarDatos.cs" />
+    <Compile Include="Clases\GuardarDatosDHT11.cs" />
     <Compile Include="formularios\frmSensorHumedadSuelo.cs">
       <SubType>Form</SubType>
     </Compile>
