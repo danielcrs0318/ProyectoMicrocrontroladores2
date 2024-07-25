@@ -47,10 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\ClaseConexion.cs" />
-    <Compile Include="Clases\ConexionArduino.cs" />
-    <Compile Include="Clases\Datagrid.cs" />
-    <Compile Include="Clases\GuardarDatos.cs" />
+    <Compile Include="Clasesensores.cs" />
+    <Compile Include="conexionsqlluca.cs" />
+    <Compile Include="formularios\FormInfrarrojo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\FormInfrarrojo.Designer.cs">
+      <DependentUpon>FormInfrarrojo.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\frmSensorHumedadSuelo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +69,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formularios\FormInfrarrojo.resx">
+      <DependentUpon>FormInfrarrojo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmSensorHumedadSuelo.resx">
       <DependentUpon>frmSensorHumedadSuelo.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +100,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Clases\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

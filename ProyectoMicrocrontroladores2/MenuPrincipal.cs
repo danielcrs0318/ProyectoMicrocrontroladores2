@@ -1,5 +1,4 @@
-﻿using ProyectoMicrocrontroladores2.Clases;
-using ProyectoMicrocrontroladores2.formularios;
+﻿using ProyectoMicrocrontroladores2.formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +12,10 @@ using System.Windows.Forms;
 namespace ProyectoMicrocrontroladores2
 {
     public partial class MenuPrincipal : Form
-
     {
-        private ClaseConexion conexion;
         public MenuPrincipal()
         {
             InitializeComponent();
-            conexion = new ClaseConexion();
-            conexion.Conectar();
         }
 
         private void sENSORHUMEDADDESUELOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,9 +32,11 @@ namespace ProyectoMicrocrontroladores2
             frmsensorhumedad.Show();
         }
 
-        private void MenuPrincipal_Load(object sender, EventArgs e)
+        private void toolStripButton5_Click(object sender, EventArgs e)
         {
+            FormInfrarrojo form = new FormInfrarrojo();
 
+            form.Show();
         }
     }
 }
