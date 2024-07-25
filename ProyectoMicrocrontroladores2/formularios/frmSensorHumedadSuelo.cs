@@ -92,7 +92,7 @@ namespace ProyectoMicrocrontroladores2.formularios
                 string data = _serialPort.ReadLine();
                 // Usar Invoke para actualizar el TextBox en el hilo principal
                 this.Invoke(new MethodInvoker(delegate {
-                    cuadroTextoDatos.AppendText(data + Environment.NewLine);
+                    cuadroTextoDatos.Text=data;
                     UpdateChart(data);
                 }));
             }
