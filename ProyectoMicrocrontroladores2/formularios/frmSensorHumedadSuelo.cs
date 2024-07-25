@@ -93,6 +93,7 @@ namespace ProyectoMicrocrontroladores2.formularios
                 // Usar Invoke para actualizar el TextBox en el hilo principal
                 this.Invoke(new MethodInvoker(delegate {
                     cuadroTextoDatos.AppendText(data + Environment.NewLine);
+                    UpdateChart(data);
                 }));
             }
             catch (Exception ex)
@@ -108,7 +109,7 @@ namespace ProyectoMicrocrontroladores2.formularios
 
         private void cuadroTextoDatos_TextChanged(object sender, EventArgs e)
         {
-            if (cuadroTextoDatos.Text == string.Empty)
+            if (cuadroTextoDatos.Text != string.Empty)
             {
                 guardarDatos.DatoHumedad = Convert.ToInt32(cuadroTextoDatos.Text);
             }
