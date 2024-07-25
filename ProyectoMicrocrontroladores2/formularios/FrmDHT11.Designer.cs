@@ -29,10 +29,10 @@
         private void InitializeComponent()
 
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblHumedad = new System.Windows.Forms.Label();
             this.lblCelsius = new System.Windows.Forms.Label();
             this.lblFahrenheit = new System.Windows.Forms.Label();
@@ -52,6 +52,7 @@
             // lblHumedad
             // 
             this.lblHumedad.AutoSize = true;
+            this.lblHumedad.ForeColor = System.Drawing.Color.White;
             this.lblHumedad.Location = new System.Drawing.Point(29, 43);
             this.lblHumedad.Name = "lblHumedad";
             this.lblHumedad.Size = new System.Drawing.Size(53, 13);
@@ -107,22 +108,22 @@
             // 
             // ChartDHT11
             // 
-            chartArea1.Name = "ChartArea1";
-            this.ChartDHT11.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.ChartDHT11.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.ChartDHT11.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.ChartDHT11.Legends.Add(legend3);
             this.ChartDHT11.Location = new System.Drawing.Point(255, 24);
             this.ChartDHT11.Name = "ChartDHT11";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series1.Legend = "Legend1";
-            series1.Name = "Humedad";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series2.Legend = "Legend1";
-            series2.Name = "Celsius";
-            this.ChartDHT11.Series.Add(series1);
-            this.ChartDHT11.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series5.Legend = "Legend1";
+            series5.Name = "Humedad";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series6.Legend = "Legend1";
+            series6.Name = "Celsius";
+            this.ChartDHT11.Series.Add(series5);
+            this.ChartDHT11.Series.Add(series6);
             this.ChartDHT11.Size = new System.Drawing.Size(371, 144);
             this.ChartDHT11.TabIndex = 7;
             this.ChartDHT11.Text = "chart1";
@@ -135,6 +136,7 @@
             this.btnConetar.TabIndex = 8;
             this.btnConetar.Text = "CONECTAR";
             this.btnConetar.UseVisualStyleBackColor = true;
+            this.btnConetar.Click += new System.EventHandler(this.btnConetar_Click);
             // 
             // btnGuardar
             // 
@@ -144,6 +146,7 @@
             this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnDesconectar
             // 
@@ -153,6 +156,7 @@
             this.btnDesconectar.TabIndex = 10;
             this.btnDesconectar.Text = "DESCONECTAR";
             this.btnDesconectar.UseVisualStyleBackColor = true;
+            this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
             // 
             // btnSalir
             // 

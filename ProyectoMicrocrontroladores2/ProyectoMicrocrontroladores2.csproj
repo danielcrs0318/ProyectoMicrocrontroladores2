@@ -52,6 +52,12 @@
     <Compile Include="Clases\Datagrid.cs" />
     <Compile Include="Clases\GuardarDatos.cs" />
     <Compile Include="Clases\GuardarDatosDHT11.cs" />
+    <Compile Include="formularios\FrmDHT11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\FrmDHT11.Designer.cs">
+      <DependentUpon>FrmDHT11.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\frmSensorHumedadSuelo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formularios\FrmDHT11.resx">
+      <DependentUpon>FrmDHT11.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmSensorHumedadSuelo.resx">
       <DependentUpon>frmSensorHumedadSuelo.cs</DependentUpon>
     </EmbeddedResource>
