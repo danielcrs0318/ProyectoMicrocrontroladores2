@@ -121,7 +121,8 @@ namespace ProyectoMicrocrontroladores2.formularios
         private void button2_Click(object sender, EventArgs e)
         {
             guardarDatos.Guardar();
-            dgvHumedadSuelo.DataSource = datagrid.ListaSensorHumedadSuelo;
+            Datagrid dgv = new Datagrid();
+            dgvHumedadSuelo.DataSource = dgv.ListaSensorHumedadSuelo;
         }
 
         private void cuadroTextoDatos_TextChanged(object sender, EventArgs e)
