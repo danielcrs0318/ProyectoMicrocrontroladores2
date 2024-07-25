@@ -36,7 +36,7 @@ namespace ProyectoMicrocrontroladores2.Clases
                 try
                 {
                     conexion.Open();
-                    MessageBox.Show("Conexion estabblecida correctamente");
+                    //MessageBox.Show("Conexion estabblecida correctamente");
                 }
                 catch (SqlException er)
                 {
@@ -49,7 +49,7 @@ namespace ProyectoMicrocrontroladores2.Clases
                 {
                     conexion.Close();
                     conexion.Open();
-                    MessageBox.Show("Conexion establecida correctamente");
+                    //MessageBox.Show("Conexion establecida correctamente");
 
                 }
                 catch (SqlException er)
