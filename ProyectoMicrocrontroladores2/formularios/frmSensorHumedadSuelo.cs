@@ -18,6 +18,7 @@ namespace ProyectoMicrocrontroladores2.formularios
     {
         private GuardarDatos guardarDatos;
         private SerialPort _serialPort;
+        private Datagrid datagrid;
         
 
         public frmSensorHumedadSuelo()
@@ -120,6 +121,7 @@ namespace ProyectoMicrocrontroladores2.formularios
         private void button2_Click(object sender, EventArgs e)
         {
             guardarDatos.Guardar();
+            dgvHumedadSuelo.DataSource = datagrid.ListaSensorHumedadSuelo;
         }
 
         private void cuadroTextoDatos_TextChanged(object sender, EventArgs e)
