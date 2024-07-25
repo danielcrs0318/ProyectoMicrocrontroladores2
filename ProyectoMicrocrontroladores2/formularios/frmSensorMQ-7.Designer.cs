@@ -32,6 +32,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.BTNDESCONECTAR = new System.Windows.Forms.Button();
             this.BTNCONECTAR = new System.Windows.Forms.Button();
@@ -97,7 +98,7 @@
             // 
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
-            this.btnExit.Location = new System.Drawing.Point(609, 13);
+            this.btnExit.Location = new System.Drawing.Point(1092, 3);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(40, 39);
@@ -152,26 +153,30 @@
             // 
             // chart1
             // 
+            this.chart1.BackColor = System.Drawing.Color.Silver;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(696, 77);
+            this.chart1.Location = new System.Drawing.Point(667, 78);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Nivel CO";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(389, 519);
+            this.chart1.Size = new System.Drawing.Size(457, 519);
             this.chart1.TabIndex = 19;
             this.chart1.Text = "chart1";
+            title1.Name = "Niveles de CO ";
+            this.chart1.Titles.Add(title1);
             // 
             // frmSensorMQ_7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1106, 651);
+            this.ClientSize = new System.Drawing.Size(1145, 651);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.BTNDESCONECTAR);
