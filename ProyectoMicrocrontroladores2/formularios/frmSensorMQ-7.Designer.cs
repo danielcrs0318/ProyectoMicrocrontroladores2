@@ -35,9 +35,9 @@
             this.txtDatos = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvMonoxido = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvMonoxido = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonoxido)).BeginInit();
             this.SuspendLayout();
@@ -113,6 +113,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Guardados";
             // 
+            // dgvMonoxido
+            // 
+            this.dgvMonoxido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMonoxido.Location = new System.Drawing.Point(11, 30);
+            this.dgvMonoxido.Name = "dgvMonoxido";
+            this.dgvMonoxido.RowHeadersWidth = 51;
+            this.dgvMonoxido.RowTemplate.Height = 24;
+            this.dgvMonoxido.Size = new System.Drawing.Size(545, 311);
+            this.dgvMonoxido.TabIndex = 0;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -135,22 +145,12 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "SENSOR DE MONOXIDO DE CARBONO(CO)";
             // 
-            // dgvMonoxido
-            // 
-            this.dgvMonoxido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMonoxido.Location = new System.Drawing.Point(11, 30);
-            this.dgvMonoxido.Name = "dgvMonoxido";
-            this.dgvMonoxido.RowHeadersWidth = 51;
-            this.dgvMonoxido.RowTemplate.Height = 24;
-            this.dgvMonoxido.Size = new System.Drawing.Size(545, 311);
-            this.dgvMonoxido.TabIndex = 0;
-            // 
             // frmSensorMQ_7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(662, 651);
+            this.ClientSize = new System.Drawing.Size(955, 651);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.BTNDESCONECTAR);
             this.Controls.Add(this.BTNCONECTAR);
