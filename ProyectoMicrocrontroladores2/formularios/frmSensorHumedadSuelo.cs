@@ -93,7 +93,6 @@ namespace ProyectoMicrocrontroladores2.formularios
                 // Usar Invoke para actualizar el TextBox en el hilo principal
                 this.Invoke(new MethodInvoker(delegate {
                     cuadroTextoDatos.Text=data;
-
                     UpdateChart(data);
                 }));
             }
