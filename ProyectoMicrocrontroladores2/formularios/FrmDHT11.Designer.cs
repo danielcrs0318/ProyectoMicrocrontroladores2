@@ -29,10 +29,10 @@
         private void InitializeComponent()
 
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblHumedad = new System.Windows.Forms.Label();
             this.lblCelsius = new System.Windows.Forms.Label();
             this.lblFahrenheit = new System.Windows.Forms.Label();
@@ -111,22 +111,22 @@
             // 
             // ChartDHT11
             // 
-            chartArea6.Name = "ChartArea1";
-            this.ChartDHT11.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.ChartDHT11.Legends.Add(legend6);
+            chartArea2.Name = "ChartArea1";
+            this.ChartDHT11.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.ChartDHT11.Legends.Add(legend2);
             this.ChartDHT11.Location = new System.Drawing.Point(255, 24);
             this.ChartDHT11.Name = "ChartDHT11";
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series11.Legend = "Legend1";
-            series11.Name = "Humedad";
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series12.Legend = "Legend1";
-            series12.Name = "Celsius";
-            this.ChartDHT11.Series.Add(series11);
-            this.ChartDHT11.Series.Add(series12);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series3.Legend = "Legend1";
+            series3.Name = "Humedad";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series4.Legend = "Legend1";
+            series4.Name = "Celsius";
+            this.ChartDHT11.Series.Add(series3);
+            this.ChartDHT11.Series.Add(series4);
             this.ChartDHT11.Size = new System.Drawing.Size(371, 144);
             this.ChartDHT11.TabIndex = 7;
             this.ChartDHT11.Text = "chart1";
@@ -169,6 +169,7 @@
             this.btnSalir.TabIndex = 11;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FrmDHT11
             // 
@@ -189,6 +190,7 @@
             this.Controls.Add(this.lblHumedad);
             this.Name = "FrmDHT11";
             this.Text = "FrmDHT11";
+            this.Load += new System.EventHandler(this.FrmDHT11_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartDHT11)).EndInit();
             this.ResumeLayout(false);

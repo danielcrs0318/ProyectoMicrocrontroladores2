@@ -17,6 +17,7 @@ namespace ProyectoMicrocrontroladores2.formularios
 
         private GuardarDatosDHT11 GuardarDatosDHT11;
         private SerialPort _serialPort;
+
         public FrmDHT11()
         {
             InitializeComponent();
@@ -41,14 +42,14 @@ namespace ProyectoMicrocrontroladores2.formularios
             }
         }
 
-        private void InitializeChart() 
+        private void InitializeChart()
         {
             //
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //guardarDatosDHT11.Guardar();
+            GuardarDatosDHT11.Guardar();
         }
 
         private void btnDesconectar_Click(object sender, EventArgs e)
@@ -62,7 +63,7 @@ namespace ProyectoMicrocrontroladores2.formularios
 
         private void txtHumedad_TextChanged(object sender, EventArgs e)
         {
-            if (txtHumedad.Text != string.Empty) 
+            if (txtHumedad.Text != string.Empty)
             {
                 GuardarDatosDHT11.DatoHumedad = Convert.ToDouble(txtHumedad);
             }
@@ -76,6 +77,7 @@ namespace ProyectoMicrocrontroladores2.formularios
             }
         }
 
+        
         private void txtFahrenheit_TextChanged(object sender, EventArgs e)
         {
             if (txtFahrenheit.Text != string.Empty)
@@ -84,7 +86,23 @@ namespace ProyectoMicrocrontroladores2.formularios
             }
 
         }
-        private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e) 
+
+        private void SerialPort_DataReceived(double humedad, double celsius, double fahrenheit)
+        {
+            Invoke(new Action(() =>
+            {
+                txtHumedad.Text = humedad.ToString();
+                txtCelsius.Text = celsius.ToString();
+                txtFahrenheit.Text = fahrenheit.ToString();
+            }));
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FrmDHT11_Load(object sender, EventArgs e)
         {
             
         }
