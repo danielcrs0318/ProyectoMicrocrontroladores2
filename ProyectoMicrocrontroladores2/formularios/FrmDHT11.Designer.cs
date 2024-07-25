@@ -29,10 +29,10 @@
         private void InitializeComponent()
 
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblHumedad = new System.Windows.Forms.Label();
             this.lblCelsius = new System.Windows.Forms.Label();
             this.lblFahrenheit = new System.Windows.Forms.Label();
@@ -83,6 +83,7 @@
             this.txtHumedad.Name = "txtHumedad";
             this.txtHumedad.Size = new System.Drawing.Size(118, 20);
             this.txtHumedad.TabIndex = 3;
+            this.txtHumedad.TextChanged += new System.EventHandler(this.txtHumedad_TextChanged);
             // 
             // txtCelsius
             // 
@@ -90,6 +91,7 @@
             this.txtCelsius.Name = "txtCelsius";
             this.txtCelsius.Size = new System.Drawing.Size(118, 20);
             this.txtCelsius.TabIndex = 4;
+            this.txtCelsius.TextChanged += new System.EventHandler(this.txtCelsius_TextChanged);
             // 
             // txtFahrenheit
             // 
@@ -97,6 +99,7 @@
             this.txtFahrenheit.Name = "txtFahrenheit";
             this.txtFahrenheit.Size = new System.Drawing.Size(118, 20);
             this.txtFahrenheit.TabIndex = 5;
+            this.txtFahrenheit.TextChanged += new System.EventHandler(this.txtFahrenheit_TextChanged);
             // 
             // dataGridView1
             // 
@@ -108,22 +111,22 @@
             // 
             // ChartDHT11
             // 
-            chartArea3.Name = "ChartArea1";
-            this.ChartDHT11.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.ChartDHT11.Legends.Add(legend3);
+            chartArea6.Name = "ChartArea1";
+            this.ChartDHT11.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.ChartDHT11.Legends.Add(legend6);
             this.ChartDHT11.Location = new System.Drawing.Point(255, 24);
             this.ChartDHT11.Name = "ChartDHT11";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series5.Legend = "Legend1";
-            series5.Name = "Humedad";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series6.Legend = "Legend1";
-            series6.Name = "Celsius";
-            this.ChartDHT11.Series.Add(series5);
-            this.ChartDHT11.Series.Add(series6);
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series11.Legend = "Legend1";
+            series11.Name = "Humedad";
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series12.Legend = "Legend1";
+            series12.Name = "Celsius";
+            this.ChartDHT11.Series.Add(series11);
+            this.ChartDHT11.Series.Add(series12);
             this.ChartDHT11.Size = new System.Drawing.Size(371, 144);
             this.ChartDHT11.TabIndex = 7;
             this.ChartDHT11.Text = "chart1";

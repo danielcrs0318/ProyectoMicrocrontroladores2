@@ -59,5 +59,34 @@ namespace ProyectoMicrocrontroladores2.formularios
                 MessageBox.Show("Desconectado del Arduino.");
             }
         }
+
+        private void txtHumedad_TextChanged(object sender, EventArgs e)
+        {
+            if (txtHumedad.Text != string.Empty) 
+            {
+                GuardarDatosDHT11.DatoHumedad = Convert.ToDouble(txtHumedad);
+            }
+        }
+
+        private void txtCelsius_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCelsius.Text != string.Empty)
+            {
+                GuardarDatosDHT11.DatoCelsius = Convert.ToDouble(txtCelsius);
+            }
+        }
+
+        private void txtFahrenheit_TextChanged(object sender, EventArgs e)
+        {
+            if (txtFahrenheit.Text != string.Empty)
+            {
+                GuardarDatosDHT11.DatoFahrenheit = Convert.ToDouble(txtFahrenheit);
+            }
+
+        }
+        private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e) 
+        {
+            
+        }
     }
 }
