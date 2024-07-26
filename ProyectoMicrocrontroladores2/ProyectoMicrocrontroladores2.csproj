@@ -51,6 +51,12 @@
     <Compile Include="Clases\ConexionArduino.cs" />
     <Compile Include="Clases\Datagrid.cs" />
     <Compile Include="Clases\GuardarDatos.cs" />
+    <Compile Include="formularios\frmMQ2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmMQ2.Designer.cs">
+      <DependentUpon>frmMQ2.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\frmSensorHumedadSuelo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formularios\frmMQ2.resx">
+      <DependentUpon>frmMQ2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmSensorHumedadSuelo.resx">
       <DependentUpon>frmSensorHumedadSuelo.cs</DependentUpon>
     </EmbeddedResource>
