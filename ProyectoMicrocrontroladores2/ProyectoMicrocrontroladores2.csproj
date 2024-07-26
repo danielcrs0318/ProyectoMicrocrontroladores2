@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClaseConexion.cs" />
+    <Compile Include="Clases\ClaseDataCO.cs" />
     <Compile Include="Clases\ClaseSensorMQ7.cs" />
     <Compile Include="Clases\ConexionArduino.cs" />
     <Compile Include="Clases\Datagrid.cs" />
