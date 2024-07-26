@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO.Ports;
 using System.Linq;
@@ -46,12 +47,12 @@ namespace ProyectoMicrocrontroladores2.formularios
         {
             //
         }
-
+        //boton guardar
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            GuardarDatosDHT11.Guardar();
+            GuardarDatosDHT11.GuardarDHT11();
         }
-
+        //boton Conectar
         private void btnDesconectar_Click(object sender, EventArgs e)
         {
             if (_serialPort.IsOpen)
@@ -60,7 +61,7 @@ namespace ProyectoMicrocrontroladores2.formularios
                 MessageBox.Show("Desconectado del Arduino.");
             }
         }
-
+        //txtHumedad
         private void txtHumedad_TextChanged(object sender, EventArgs e)
         {
             if (txtHumedad.Text != string.Empty)
@@ -68,7 +69,7 @@ namespace ProyectoMicrocrontroladores2.formularios
                 GuardarDatosDHT11.DatoHumedad = Convert.ToDouble(txtHumedad);
             }
         }
-
+        //txtcelsius
         private void txtCelsius_TextChanged(object sender, EventArgs e)
         {
             if (txtCelsius.Text != string.Empty)
@@ -77,7 +78,7 @@ namespace ProyectoMicrocrontroladores2.formularios
             }
         }
 
-        
+        //txtfahrenheit
         private void txtFahrenheit_TextChanged(object sender, EventArgs e)
         {
             if (txtFahrenheit.Text != string.Empty)
@@ -86,17 +87,36 @@ namespace ProyectoMicrocrontroladores2.formularios
             }
 
         }
-        
+
+        private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            try
+            {
+                string datos = _serialPort.ReadLine();
+                string[] valores = datos.Split(';');
+                if (valores.Length == 3)
+                {
+                    double humedad = double.Parse(valores[0]);
+                    double celsius = double.Parse(valores[1]);
+                    double fahrenheit = double.Parse(valores[2]);
+
+                    SerialPort_DataReceived(humedad, celsius, fahrenheit);
+
+                    // Guardar los datos en la base de datos
+                    GuardarDatosDHT11(humedad, celsius, fahrenheit);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción (opcionalmente puedes registrar errores)
+                MessageBox.Show("Error al recibir datos: " + ex.Message);
+            }
+        }
+        //ELIMINA PROBLEMAS DE SERIALPORTdaTARECEIVED
         private void SerialPort_DataReceived(double humedad, double celsius, double fahrenheit)
         {
-            Invoke(new Action(() =>
-            {
-                txtHumedad.Text = humedad.ToString();
-                txtCelsius.Text = celsius.ToString();
-                txtFahrenheit.Text = fahrenheit.ToString();
-            }));
+            throw new NotImplementedException();
         }
-        
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -104,12 +124,38 @@ namespace ProyectoMicrocrontroladores2.formularios
         }
 
 
-        /*
+
         private void FrmDHT11_Load(object sender, EventArgs e)
         {
             _serialPort = new SerialPort("COM3", 9600);
             _serialPort.DataReceived += new SerialDataReceivedEventHandler(SerialPort_DataReceived);
         }
+        /* NO USAR
+        private void GuardarDatosBBDdht(double humedad, double celsius, double fahrenheit)
+        {
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion))
+                {
+                    string consulta = "INSERT INTO SensorData (Humedad, Celsius, Fahrenheit) VALUES (@humedad, @celsius, @fahrenheit)";
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@humedad", humedad);
+                        comando.Parameters.AddWithValue("@celsius", celsius);
+                        comando.Parameters.AddWithValue("@fahrenheit", fahrenheit);
+                        conexion.Open();
+                        comando.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción (opcionalmente puedes registrar errores)
+                MessageBox.Show("Error al guardar datos en la base de datos: " + ex.Message);
+            }
+        }
+
         */
+
     }
 }

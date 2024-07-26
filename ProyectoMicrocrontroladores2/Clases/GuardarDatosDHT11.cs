@@ -27,7 +27,7 @@ namespace ProyectoMicrocrontroladores2.Clases
             DatoFahrenheit = fahrenheit;
         }
         //metodo para que guarde los datos en la bdd
-        public void Guardar()
+        public void GuardarDHT11()
         {
             //validamos si el campo esta vacio 
             if (DatoHumedad == 0 || DatoCelsius == 0 || DatoFahrenheit == 0)
