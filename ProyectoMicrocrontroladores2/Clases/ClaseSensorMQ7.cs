@@ -32,7 +32,7 @@ namespace ProyectoMicrocrontroladores2.Clases
             }
             else
             {
-                string sql = $"insert into " +
+                string sql = $"insert into SensorMQ7(NivelSensor)" +
                     $"values ({DatoCO});";
                 ClaseConexion c = new ClaseConexion();
                 if (c.Ejecutar(sql))
