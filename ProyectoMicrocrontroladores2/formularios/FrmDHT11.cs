@@ -86,7 +86,7 @@ namespace ProyectoMicrocrontroladores2.formularios
             }
 
         }
-
+        
         private void SerialPort_DataReceived(double humedad, double celsius, double fahrenheit)
         {
             Invoke(new Action(() =>
@@ -96,15 +96,20 @@ namespace ProyectoMicrocrontroladores2.formularios
                 txtFahrenheit.Text = fahrenheit.ToString();
             }));
         }
+        
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+
+        /*
         private void FrmDHT11_Load(object sender, EventArgs e)
         {
-            
+            _serialPort = new SerialPort("COM3", 9600);
+            _serialPort.DataReceived += new SerialDataReceivedEventHandler(SerialPort_DataReceived);
         }
+        */
     }
 }
