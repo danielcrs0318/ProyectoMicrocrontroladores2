@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO.Ports;
 using System.Data.SqlClient;
 using ProyectoMicrocrontroladores2.Clases;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ProyectoMicrocrontroladores2.formularios
 {
