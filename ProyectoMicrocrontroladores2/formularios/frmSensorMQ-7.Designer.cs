@@ -29,60 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSensorMQ_7));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.BTNDESCONECTAR = new System.Windows.Forms.Button();
-            this.BTNCONECTAR = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.txtDatos = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvMonoxido = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnConectarA = new System.Windows.Forms.Button();
+            this.btnGuardarD = new System.Windows.Forms.Button();
+            this.btnDesconectarA = new System.Windows.Forms.Button();
+            this.dgvMonoxido = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMonoxido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMonoxido)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(235, 162);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(141, 53);
-            this.btnGuardar.TabIndex = 18;
-            this.btnGuardar.Text = "GUARDAR";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // BTNDESCONECTAR
-            // 
-            this.BTNDESCONECTAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNDESCONECTAR.Location = new System.Drawing.Point(403, 162);
-            this.BTNDESCONECTAR.Margin = new System.Windows.Forms.Padding(4);
-            this.BTNDESCONECTAR.Name = "BTNDESCONECTAR";
-            this.BTNDESCONECTAR.Size = new System.Drawing.Size(180, 53);
-            this.BTNDESCONECTAR.TabIndex = 17;
-            this.BTNDESCONECTAR.Text = "DESCONECTAR";
-            this.BTNDESCONECTAR.UseVisualStyleBackColor = true;
-            this.BTNDESCONECTAR.Click += new System.EventHandler(this.BTNDESCONECTAR_Click);
-            // 
-            // BTNCONECTAR
-            // 
-            this.BTNCONECTAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNCONECTAR.Location = new System.Drawing.Point(67, 162);
-            this.BTNCONECTAR.Margin = new System.Windows.Forms.Padding(4);
-            this.BTNCONECTAR.Name = "BTNCONECTAR";
-            this.BTNCONECTAR.Size = new System.Drawing.Size(141, 53);
-            this.BTNCONECTAR.TabIndex = 16;
-            this.BTNCONECTAR.Text = "CONECTAR";
-            this.BTNCONECTAR.UseVisualStyleBackColor = true;
-            this.BTNCONECTAR.Click += new System.EventHandler(this.BTNCONECTAR_Click);
             // 
             // txtDatos
             // 
@@ -119,16 +83,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Guardados";
             // 
-            // dgvMonoxido
-            // 
-            this.dgvMonoxido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMonoxido.Location = new System.Drawing.Point(11, 30);
-            this.dgvMonoxido.Name = "dgvMonoxido";
-            this.dgvMonoxido.RowHeadersWidth = 51;
-            this.dgvMonoxido.RowTemplate.Height = 24;
-            this.dgvMonoxido.Size = new System.Drawing.Size(545, 311);
-            this.dgvMonoxido.TabIndex = 0;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -154,24 +108,67 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Silver;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(667, 78);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Nivel CO";
-            this.chart1.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Legend = "Legend1";
+            series3.Name = "Nivel CO";
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(457, 519);
             this.chart1.TabIndex = 19;
             this.chart1.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Niveles de CO ";
-            title1.Text = "Datos de Sensor MQ-7";
-            this.chart1.Titles.Add(title1);
+            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.Name = "Niveles de CO ";
+            title3.Text = "Datos de Sensor MQ-7";
+            this.chart1.Titles.Add(title3);
+            // 
+            // btnConectarA
+            // 
+            this.btnConectarA.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConectarA.Location = new System.Drawing.Point(98, 155);
+            this.btnConectarA.Name = "btnConectarA";
+            this.btnConectarA.Size = new System.Drawing.Size(132, 68);
+            this.btnConectarA.TabIndex = 20;
+            this.btnConectarA.Text = "Conectar";
+            this.btnConectarA.UseVisualStyleBackColor = true;
+            this.btnConectarA.Click += new System.EventHandler(this.btnConectarA_Click);
+            // 
+            // btnGuardarD
+            // 
+            this.btnGuardarD.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarD.Location = new System.Drawing.Point(257, 155);
+            this.btnGuardarD.Name = "btnGuardarD";
+            this.btnGuardarD.Size = new System.Drawing.Size(132, 68);
+            this.btnGuardarD.TabIndex = 21;
+            this.btnGuardarD.Text = "Guardar";
+            this.btnGuardarD.UseVisualStyleBackColor = true;
+            this.btnGuardarD.Click += new System.EventHandler(this.btnGuardarD_Click);
+            // 
+            // btnDesconectarA
+            // 
+            this.btnDesconectarA.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDesconectarA.Location = new System.Drawing.Point(410, 155);
+            this.btnDesconectarA.Name = "btnDesconectarA";
+            this.btnDesconectarA.Size = new System.Drawing.Size(175, 68);
+            this.btnDesconectarA.TabIndex = 22;
+            this.btnDesconectarA.Text = "Desconectar";
+            this.btnDesconectarA.UseVisualStyleBackColor = true;
+            this.btnDesconectarA.Click += new System.EventHandler(this.btnDesconectarA_Click);
+            // 
+            // dgvMonoxido
+            // 
+            this.dgvMonoxido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMonoxido.Location = new System.Drawing.Point(20, 33);
+            this.dgvMonoxido.Name = "dgvMonoxido";
+            this.dgvMonoxido.RowHeadersWidth = 51;
+            this.dgvMonoxido.RowTemplate.Height = 24;
+            this.dgvMonoxido.Size = new System.Drawing.Size(544, 308);
+            this.dgvMonoxido.TabIndex = 0;
             // 
             // frmSensorMQ_7
             // 
@@ -179,10 +176,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1145, 651);
+            this.Controls.Add(this.btnDesconectarA);
+            this.Controls.Add(this.btnGuardarD);
+            this.Controls.Add(this.btnConectarA);
             this.Controls.Add(this.chart1);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.BTNDESCONECTAR);
-            this.Controls.Add(this.BTNCONECTAR);
             this.Controls.Add(this.txtDatos);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.groupBox1);
@@ -193,24 +190,23 @@
             this.Text = "frmSensorMQ_7";
             this.Load += new System.EventHandler(this.frmSensorMQ_7_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMonoxido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMonoxido)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button BTNDESCONECTAR;
-        private System.Windows.Forms.Button BTNCONECTAR;
         private System.Windows.Forms.TextBox txtDatos;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvMonoxido;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Button btnConectarA;
+        private System.Windows.Forms.Button btnGuardarD;
+        private System.Windows.Forms.Button btnDesconectarA;
+        private System.Windows.Forms.DataGridView dgvMonoxido;
     }
 }

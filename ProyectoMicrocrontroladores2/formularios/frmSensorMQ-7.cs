@@ -18,15 +18,32 @@ namespace ProyectoMicrocrontroladores2.formularios
     {
         private ClaseSensorMQ7 ClaseSensorMQ7;
         private SerialPort _serialPort;
+        private Datagrid ClaseDataCO;
 
         private DataTable data;
         public frmSensorMQ_7()
         {
             InitializeComponent();
             ClaseSensorMQ7 = new ClaseSensorMQ7();
-
-            Datagrid le = new Datagrid();
+            InitializeChart();
+            ClaseDataCO le = new ClaseDataCO();
             dgvMonoxido.DataSource = le.ListaSensorMQ7;
+        }
+        private void InitializeChart()
+        {
+            chart1.Series.Clear();
+            Series series = new Series("ArduinoData")
+            {
+                ChartType = SeriesChartType.Line
+            };
+            chart1.Series.Add(series);
+        }
+        private void UpdateChart(string data)
+        {
+            if (double.TryParse(data, out double value))
+            {
+                chart1.Series["ArduinoData"].Points.AddY(value);
+            }
         }
 
         private void frmSensorMQ_7_Load(object sender, EventArgs e)
@@ -40,7 +57,7 @@ namespace ProyectoMicrocrontroladores2.formularios
             this.Close();
         }
 
-        private void BTNCONECTAR_Click(object sender, EventArgs e)
+        /*private void BTNCONECTAR_Click(object sender, EventArgs e)
         {
             try
             {
@@ -63,7 +80,8 @@ namespace ProyectoMicrocrontroladores2.formularios
                 _serialPort.Close();
                 MessageBox.Show("Desconectado del Arduino.");
             }
-        }
+        }*/
+
         private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             try
@@ -71,13 +89,27 @@ namespace ProyectoMicrocrontroladores2.formularios
                 string data = _serialPort.ReadLine();
                 // Usar Invoke para actualizar el TextBox en el hilo principal
                 this.Invoke(new MethodInvoker(delegate {
-                    txtDatos.AppendText(data + Environment.NewLine);
+                    txtDatos.Text = data;
+                    UpdateChart(data);
                 }));
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al recibir datos: {ex.Message}");
             }
+        }
+        /*private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            string data = _serialPort.ReadLine();
+            this.Invoke(new MethodInvoker(delegate
+            {
+                
+            }));
+        }*/
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            _serialPort.Close();
+            base.OnFormClosing(e);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -96,6 +128,38 @@ namespace ProyectoMicrocrontroladores2.formularios
         private void dgvMonoxido_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnConectarA_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!_serialPort.IsOpen)
+                {
+                    _serialPort.Open();
+                    MessageBox.Show("Conectado al Arduino.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al conectar: {ex.Message}");
+            }
+        }
+
+        private void btnDesconectarA_Click(object sender, EventArgs e)
+        {
+            if (_serialPort.IsOpen)
+            {
+                _serialPort.Close();
+                MessageBox.Show("Desconectado del Arduino.");
+            }
+        }
+
+        private void btnGuardarD_Click(object sender, EventArgs e)
+        {
+            ClaseSensorMQ7.Guardar();
+            ClaseDataCO dgv = new ClaseDataCO();
+            dgvMonoxido.DataSource = dgv.ListaSensorMQ7;
         }
     }
 }
