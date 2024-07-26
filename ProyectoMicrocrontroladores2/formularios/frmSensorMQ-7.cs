@@ -90,6 +90,7 @@ namespace ProyectoMicrocrontroladores2.formularios
                 // Usar Invoke para actualizar el TextBox en el hilo principal
                 this.Invoke(new MethodInvoker(delegate {
                     txtDatos.Text = data;
+                    txtDatosEstado.Text = data;
                     UpdateChart(data);
                 }));
             }
@@ -160,6 +161,19 @@ namespace ProyectoMicrocrontroladores2.formularios
             ClaseSensorMQ7.Guardar();
             ClaseDataCO dgv = new ClaseDataCO();
             dgvMonoxido.DataSource = dgv.ListaSensorMQ7;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDatosEstado_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDatosEstado.Text != string.Empty)
+            {
+                ClaseSensorMQ7.DatoCO = Convert.ToInt32(txtDatosEstado.Text);
+            }
         }
     }
 }
