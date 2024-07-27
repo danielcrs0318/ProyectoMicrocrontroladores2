@@ -32,11 +32,18 @@ namespace ProyectoMicrocrontroladores2
             frmsensorhumedad.Show();
         }
 
-        private void toolStripButton5_Click(object sender, EventArgs e)
+        /*private void toolStripButton5_Click(object sender, EventArgs e)
         {
             FormInfrarrojo form = new FormInfrarrojo();
 
             form.Show();
+        }*/
+
+        private void toolStripButton5_Click_1(object sender, EventArgs e)
+        {
+            FormInfrarrojo frm = new FormInfrarrojo();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }
