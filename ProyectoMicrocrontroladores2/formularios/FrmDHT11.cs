@@ -101,9 +101,9 @@ namespace ProyectoMicrocrontroladores2.formularios
                     double fahrenheit = double.Parse(valores[2]);
 
                     SerialPort_DataReceived(humedad, celsius, fahrenheit);
-
+                    GuardarDatosDHT11 guardarDHT11 = new GuardarDatosDHT11();
                     // Guardar los datos en la base de datos
-                    GuardarDatosDHT11(humedad, celsius, fahrenheit);
+                    guardarDHT11.GuardarDHT11();
                 }
             }
             catch (Exception ex)
