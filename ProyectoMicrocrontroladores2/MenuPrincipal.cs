@@ -35,7 +35,7 @@ namespace ProyectoMicrocrontroladores2
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             FormInfrarrojo form = new FormInfrarrojo();
-
+            form.MdiParent = this;
             form.Show();
         }
     }
