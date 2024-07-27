@@ -21,7 +21,7 @@ namespace ProyectoMicrocrontroladores2.formularios
             InitializeComponent();
             Port = new SerialPort
             {
-                PortName = "COM7",
+                PortName = "COM3",
                 BaudRate = 9600,
                 ReadTimeout = 500
             };
@@ -213,6 +213,11 @@ namespace ProyectoMicrocrontroladores2.formularios
             {
                 MessageBox.Show("No hay datos para guardar.");
             }
+        }
+
+        private void frmMQ2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
