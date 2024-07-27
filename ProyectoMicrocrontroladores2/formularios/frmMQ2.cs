@@ -160,7 +160,7 @@ namespace ProyectoMicrocrontroladores2.formularios
             LoadDataGridByDate(dateTimePicker1.Value.Date);
         }
 
-        private void btnConnect_Click(object sender, EventArgs e)
+        /*private void btnConnect_Click(object sender, EventArgs e)
         {
             try
             {
@@ -180,7 +180,7 @@ namespace ProyectoMicrocrontroladores2.formularios
 
 
             LoadDataGrid();
-        }
+        }*/
 
         private void btndown_Click(object sender, EventArgs e)
         {
@@ -218,6 +218,28 @@ namespace ProyectoMicrocrontroladores2.formularios
         private void frmMQ2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConnect_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Port.Open();
+                Console.WriteLine("Conexión al puerto serie establecida.");
+                IsClosed = false;
+                Hilo = new Thread(EscucharSerial)
+                {
+                    IsBackground = true
+                };
+                Hilo.Start();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al abrir el puerto: {ex.Message}");
+            }
+
+
+            LoadDataGrid();
         }
     }
 }
