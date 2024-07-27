@@ -41,5 +41,17 @@ namespace ProyectoMicrocrontroladores2
         {
 
         }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            frmMQ2 frmMQ2 = new frmMQ2();
+            frmMQ2.MdiParent = this;
+            frmMQ2.Show();
+        }
     }
 }
