@@ -18,7 +18,7 @@ namespace ProyectoMicrocrontroladores2.formularios
     {
         private ClaseSensorMQ7 ClaseSensorMQ7;
         private SerialPort _serialPort;
-        private Datagrid ClaseDataCO;
+        private ClaseDataCO ClaseDataCO;
 
         private DataTable data;
         public frmSensorMQ_7()
