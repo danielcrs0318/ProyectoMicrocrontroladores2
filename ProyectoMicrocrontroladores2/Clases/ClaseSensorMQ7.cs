@@ -14,6 +14,7 @@ namespace ProyectoMicrocrontroladores2.Clases
     {
         public int DatoCO {  get; set; }
 
+
         public ClaseSensorMQ7() 
         { 
            DatoCO = 0;
