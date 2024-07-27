@@ -178,6 +178,7 @@
             this.toolStripLabel4.Name = "toolStripLabel4";
             this.toolStripLabel4.Size = new System.Drawing.Size(221, 20);
             this.toolStripLabel4.Text = "SENSOR DHT11";
+            this.toolStripLabel4.Click += new System.EventHandler(this.toolStripLabel4_Click);
             // 
             // toolStripSeparator7
             // 

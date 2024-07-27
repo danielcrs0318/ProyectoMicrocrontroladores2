@@ -48,5 +48,13 @@ namespace ProyectoMicrocrontroladores2
             frmDHT11.MdiParent = this;
             frmDHT11.Show();
         }
+
+        private void toolStripLabel4_Click(object sender, EventArgs e)
+        {
+            FrmDHT11 frmDHT11 = new FrmDHT11();
+            frmDHT11.MdiParent = this;
+            frmDHT11.Show();
+
+        }
     }
 }
