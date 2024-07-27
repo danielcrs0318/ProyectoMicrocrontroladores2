@@ -81,22 +81,22 @@
             this.toolStripSeparator10});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(239, 577);
+            this.toolStrip1.Size = new System.Drawing.Size(224, 577);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
-            this.toolStripLabel1.Font = new System.Drawing.Font("Swis721 Blk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel1.ForeColor = System.Drawing.SystemColors.Menu;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(236, 19);
+            this.toolStripLabel1.Size = new System.Drawing.Size(221, 20);
             this.toolStripLabel1.Text = "SENSOR HUMEDAD SUELO";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(236, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // toolStripButton1
             // 
@@ -105,27 +105,27 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(236, 20);
+            this.toolStripButton1.Size = new System.Drawing.Size(221, 20);
             this.toolStripButton1.Text = "ABRIR";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(236, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(221, 6);
             // 
             // toolStripLabel2
             // 
-            this.toolStripLabel2.Font = new System.Drawing.Font("Swis721 Blk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel2.ForeColor = System.Drawing.SystemColors.Menu;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(236, 19);
+            this.toolStripLabel2.Size = new System.Drawing.Size(221, 20);
             this.toolStripLabel2.Text = "SENSOR MQ7";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(236, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(221, 6);
             // 
             // toolStripButton2
             // 
@@ -135,26 +135,26 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(236, 20);
+            this.toolStripButton2.Size = new System.Drawing.Size(221, 20);
             this.toolStripButton2.Text = "toolStripButton2";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(236, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(221, 6);
             // 
             // toolStripLabel3
             // 
-            this.toolStripLabel3.Font = new System.Drawing.Font("Swis721 Blk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel3.ForeColor = System.Drawing.SystemColors.Menu;
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(236, 19);
+            this.toolStripLabel3.Size = new System.Drawing.Size(221, 20);
             this.toolStripLabel3.Text = "SENSOR MQ2";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(236, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(221, 6);
             // 
             // toolStripButton3
             // 
@@ -163,27 +163,27 @@
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(236, 20);
+            this.toolStripButton3.Size = new System.Drawing.Size(221, 20);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(236, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(221, 6);
             // 
             // toolStripLabel4
             // 
-            this.toolStripLabel4.Font = new System.Drawing.Font("Swis721 Blk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel4.ForeColor = System.Drawing.SystemColors.Menu;
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(236, 19);
+            this.toolStripLabel4.Size = new System.Drawing.Size(221, 20);
             this.toolStripLabel4.Text = "SENSOR DHT11";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.ForeColor = System.Drawing.SystemColors.Menu;
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(236, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(221, 6);
             // 
             // toolStripButton4
             // 
@@ -193,27 +193,28 @@
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(236, 20);
+            this.toolStripButton4.Size = new System.Drawing.Size(221, 20);
             this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripLabel5
             // 
-            this.toolStripLabel5.Font = new System.Drawing.Font("Swis721 Blk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel5.ForeColor = System.Drawing.SystemColors.Menu;
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(236, 19);
+            this.toolStripLabel5.Size = new System.Drawing.Size(221, 20);
             this.toolStripLabel5.Text = "SENSOR SERVOMOTOR";
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.ForeColor = System.Drawing.SystemColors.Menu;
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(236, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(221, 6);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(236, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(221, 6);
             // 
             // toolStripButton5
             // 
@@ -222,13 +223,13 @@
             this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(236, 20);
+            this.toolStripButton5.Size = new System.Drawing.Size(221, 20);
             this.toolStripButton5.Text = "toolStripButton5";
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(236, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(221, 6);
             // 
             // MenuPrincipal
             // 
