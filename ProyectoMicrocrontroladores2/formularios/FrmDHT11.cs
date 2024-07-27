@@ -93,17 +93,24 @@ namespace ProyectoMicrocrontroladores2.formularios
             try
             {
                 string datos = _serialPort.ReadLine();
-                string[] valores = datos.Split(';');
+                string[] valores = datos.Split(':');
                 if (valores.Length == 3)
                 {
                     double humedad = double.Parse(valores[0]);
                     double celsius = double.Parse(valores[1]);
                     double fahrenheit = double.Parse(valores[2]);
 
-                    SerialPort_DataReceived(humedad, celsius, fahrenheit);
+                    Invoke(new Action(() =>
+                    {
+                        txtHumedad.Text = humedad.ToString();
+                        txtCelsius.Text = celsius.ToString();
+                        txtFahrenheit.Text = fahrenheit.ToString();
+                    }));
+
                     GuardarDatosDHT11 guardarDHT11 = new GuardarDatosDHT11();
                     // Guardar los datos en la base de datos
                     guardarDHT11.GuardarDHT11();
+
                 }
             }
             catch (Exception ex)
