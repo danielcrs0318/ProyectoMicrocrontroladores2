@@ -47,6 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clasesensores.cs" />
+    <Compile Include="conexionsqlluca.cs" />
+    <Compile Include="formularios\FormInfrarrojo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\FormInfrarrojo.Designer.cs">
+      <DependentUpon>FormInfrarrojo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\ClaseConexion.cs" />
     <Compile Include="Clases\ConexionArduino.cs" />
     <Compile Include="Clases\Datagrid.cs" />
