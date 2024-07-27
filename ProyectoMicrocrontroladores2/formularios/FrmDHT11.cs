@@ -110,7 +110,7 @@ namespace ProyectoMicrocrontroladores2.formularios
                     GuardarDatosDHT11 guardarDHT11 = new GuardarDatosDHT11();
                     // Guardar los datos en la base de datos
                     guardarDHT11.GuardarDHT11();
-
+                    //cambios
                 }
             }
             catch (Exception ex)
