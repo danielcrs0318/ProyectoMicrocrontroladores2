@@ -90,7 +90,7 @@ namespace ProyectoMicrocrontroladores2.formularios
                 // Usar Invoke para actualizar el TextBox en el hilo principal
                 this.Invoke(new MethodInvoker(delegate {
                     txtDatos.Text = data;
-                    txtDatosEstado.Text = data;
+                  
                     UpdateChart(data);
                 }));
             }
@@ -170,10 +170,7 @@ namespace ProyectoMicrocrontroladores2.formularios
 
         private void txtDatosEstado_TextChanged(object sender, EventArgs e)
         {
-            if (txtDatosEstado.Text != string.Empty)
-            {
-                ClaseSensorMQ7.DatoCO = Convert.ToInt32(txtDatosEstado.Text);
-            }
+            
         }
     }
 }

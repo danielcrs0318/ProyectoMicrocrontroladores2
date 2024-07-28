@@ -44,7 +44,8 @@
             this.btnGuardarD = new System.Windows.Forms.Button();
             this.btnDesconectarA = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDatosEstado = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonoxido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -53,10 +54,10 @@
             // txtDatos
             // 
             this.txtDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDatos.Location = new System.Drawing.Point(269, 82);
+            this.txtDatos.Location = new System.Drawing.Point(285, 78);
             this.txtDatos.Margin = new System.Windows.Forms.Padding(4);
             this.txtDatos.Name = "txtDatos";
-            this.txtDatos.Size = new System.Drawing.Size(293, 26);
+            this.txtDatos.Size = new System.Drawing.Size(231, 26);
             this.txtDatos.TabIndex = 7;
             this.txtDatos.TextChanged += new System.EventHandler(this.txtDatos_TextChanged);
             // 
@@ -64,7 +65,7 @@
             // 
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
-            this.btnExit.Location = new System.Drawing.Point(1046, 3);
+            this.btnExit.Location = new System.Drawing.Point(1059, 3);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(40, 39);
@@ -76,7 +77,7 @@
             // 
             this.groupBox1.Controls.Add(this.dgvMonoxido);
             this.groupBox1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(15, 276);
+            this.groupBox1.Location = new System.Drawing.Point(15, 340);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -99,7 +100,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 82);
+            this.label2.Location = new System.Drawing.Point(72, 78);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(187, 22);
@@ -133,7 +134,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Nivel CO";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(457, 555);
+            this.chart1.Size = new System.Drawing.Size(457, 619);
             this.chart1.TabIndex = 19;
             this.chart1.Text = "chart1";
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -144,9 +145,9 @@
             // btnConectarA
             // 
             this.btnConectarA.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConectarA.Location = new System.Drawing.Point(60, 191);
+            this.btnConectarA.Location = new System.Drawing.Point(65, 282);
             this.btnConectarA.Name = "btnConectarA";
-            this.btnConectarA.Size = new System.Drawing.Size(132, 68);
+            this.btnConectarA.Size = new System.Drawing.Size(132, 46);
             this.btnConectarA.TabIndex = 20;
             this.btnConectarA.Text = "Conectar";
             this.btnConectarA.UseVisualStyleBackColor = true;
@@ -155,9 +156,9 @@
             // btnGuardarD
             // 
             this.btnGuardarD.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarD.Location = new System.Drawing.Point(219, 191);
+            this.btnGuardarD.Location = new System.Drawing.Point(203, 282);
             this.btnGuardarD.Name = "btnGuardarD";
-            this.btnGuardarD.Size = new System.Drawing.Size(132, 68);
+            this.btnGuardarD.Size = new System.Drawing.Size(132, 46);
             this.btnGuardarD.TabIndex = 21;
             this.btnGuardarD.Text = "Guardar";
             this.btnGuardarD.UseVisualStyleBackColor = true;
@@ -166,9 +167,9 @@
             // btnDesconectarA
             // 
             this.btnDesconectarA.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDesconectarA.Location = new System.Drawing.Point(372, 191);
+            this.btnDesconectarA.Location = new System.Drawing.Point(341, 282);
             this.btnDesconectarA.Name = "btnDesconectarA";
-            this.btnDesconectarA.Size = new System.Drawing.Size(175, 68);
+            this.btnDesconectarA.Size = new System.Drawing.Size(175, 46);
             this.btnDesconectarA.TabIndex = 22;
             this.btnDesconectarA.Text = "Desconectar";
             this.btnDesconectarA.UseVisualStyleBackColor = true;
@@ -177,31 +178,41 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(138, 142);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(76, 131);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 30);
+            this.label3.Size = new System.Drawing.Size(209, 25);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Estado";
+            this.label3.Text = "CO <= 500 \"Normal\"";
             // 
-            // txtDatosEstado
+            // label4
             // 
-            this.txtDatosEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDatosEstado.Location = new System.Drawing.Point(269, 146);
-            this.txtDatosEstado.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDatosEstado.Name = "txtDatosEstado";
-            this.txtDatosEstado.Size = new System.Drawing.Size(293, 26);
-            this.txtDatosEstado.TabIndex = 24;
-            this.txtDatosEstado.TextChanged += new System.EventHandler(this.txtDatosEstado_TextChanged);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(76, 185);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(322, 25);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "CO > 500 , <=800 \"Precaucion\" ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(76, 244);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(207, 25);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "CO > 1000 \"Peligro\"";
             // 
             // frmSensorMQ_7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1101, 664);
-            this.Controls.Add(this.txtDatosEstado);
+            this.ClientSize = new System.Drawing.Size(1102, 714);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnDesconectarA);
             this.Controls.Add(this.btnGuardarD);
@@ -236,6 +247,7 @@
         private System.Windows.Forms.Button btnDesconectarA;
         private System.Windows.Forms.DataGridView dgvMonoxido;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDatosEstado;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
