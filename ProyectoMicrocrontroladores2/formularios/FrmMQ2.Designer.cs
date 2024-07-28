@@ -1,6 +1,6 @@
 ﻿namespace ProyectoMicrocrontroladores2.formularios
 {
-    partial class FrmMQ2
+    partial class frmMQ2
     {
         /// <summary>
         /// Required designer variable.
@@ -53,7 +53,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(557, 152);
+            this.chart1.Location = new System.Drawing.Point(569, 145);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -66,7 +66,7 @@
             // 
             // btnConnect
             // 
-            this.btnConnect.Location = new System.Drawing.Point(64, 290);
+            this.btnConnect.Location = new System.Drawing.Point(76, 283);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(146, 29);
             this.btnConnect.TabIndex = 24;
@@ -75,7 +75,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(226, 290);
+            this.btnSave.Location = new System.Drawing.Point(238, 283);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(146, 29);
             this.btnSave.TabIndex = 23;
@@ -84,7 +84,7 @@
             // 
             // btndown
             // 
-            this.btndown.Location = new System.Drawing.Point(384, 290);
+            this.btndown.Location = new System.Drawing.Point(396, 283);
             this.btndown.Name = "btndown";
             this.btndown.Size = new System.Drawing.Size(146, 29);
             this.btndown.TabIndex = 22;
@@ -96,7 +96,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 10.2F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(71, 216);
+            this.label1.Location = new System.Drawing.Point(83, 209);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 21);
             this.label1.TabIndex = 21;
@@ -104,7 +104,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(288, 215);
+            this.dateTimePicker1.Location = new System.Drawing.Point(300, 208);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(242, 22);
             this.dateTimePicker1.TabIndex = 20;
@@ -112,7 +112,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(55, 349);
+            this.dataGridView1.Location = new System.Drawing.Point(67, 342);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -124,7 +124,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Showcard Gothic", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTitulo.Location = new System.Drawing.Point(310, 17);
+            this.lblTitulo.Location = new System.Drawing.Point(322, 10);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(159, 29);
             this.lblTitulo.TabIndex = 18;
@@ -135,7 +135,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Showcard Gothic", 10.2F);
             this.lblEstado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEstado.Location = new System.Drawing.Point(71, 169);
+            this.lblEstado.Location = new System.Drawing.Point(83, 162);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(79, 21);
             this.lblEstado.TabIndex = 17;
@@ -144,7 +144,7 @@
             // txtEstado
             // 
             this.txtEstado.Enabled = false;
-            this.txtEstado.Location = new System.Drawing.Point(288, 169);
+            this.txtEstado.Location = new System.Drawing.Point(300, 162);
             this.txtEstado.Multiline = true;
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.ReadOnly = true;
@@ -156,7 +156,7 @@
             this.lblNivel.AutoSize = true;
             this.lblNivel.Font = new System.Drawing.Font("Showcard Gothic", 10.2F);
             this.lblNivel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNivel.Location = new System.Drawing.Point(71, 119);
+            this.lblNivel.Location = new System.Drawing.Point(83, 112);
             this.lblNivel.Name = "lblNivel";
             this.lblNivel.Size = new System.Drawing.Size(139, 21);
             this.lblNivel.TabIndex = 15;
@@ -165,19 +165,19 @@
             // txtGas
             // 
             this.txtGas.Enabled = false;
-            this.txtGas.Location = new System.Drawing.Point(288, 119);
+            this.txtGas.Location = new System.Drawing.Point(300, 112);
             this.txtGas.Multiline = true;
             this.txtGas.Name = "txtGas";
             this.txtGas.ReadOnly = true;
             this.txtGas.Size = new System.Drawing.Size(242, 28);
             this.txtGas.TabIndex = 14;
             // 
-            // FrmMQ2
+            // frmMQ2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1049, 530);
+            this.ClientSize = new System.Drawing.Size(1078, 518);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.btnSave);
@@ -190,8 +190,8 @@
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.lblNivel);
             this.Controls.Add(this.txtGas);
-            this.Name = "FrmMQ2";
-            this.Text = "FrmMQ2";
+            this.Name = "frmMQ2";
+            this.Text = "frmMQ2";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

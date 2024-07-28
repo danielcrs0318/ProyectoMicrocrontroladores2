@@ -48,7 +48,7 @@ namespace ProyectoMicrocrontroladores2
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            FrmMQ2 frm = new FrmMQ2();
+            frmMQ2 frm = new frmMQ2();
             frm.MdiParent = this;
             frm.Show();
         }
