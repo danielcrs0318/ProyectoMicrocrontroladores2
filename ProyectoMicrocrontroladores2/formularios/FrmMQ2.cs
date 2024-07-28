@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Data;
+using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting; 
-using ProyectoMicrocrontroladores2.Clases; 
+using System.Windows.Forms.DataVisualization.Charting;
+using ProyectoMicrocrontroladores2.Clases;
 
 namespace ProyectoMicrocrontroladores2.formularios
 {
@@ -48,17 +49,16 @@ namespace ProyectoMicrocrontroladores2.formularios
 
             chart1.Series.Add(series);
 
-            
             chart1.ChartAreas[0].AxisX.LabelStyle.Format = "MM/dd/yyyy HH:mm:ss";
             chart1.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
             chart1.ChartAreas[0].AxisY.Title = "Porcentaje";
             chart1.ChartAreas[0].AxisX.Title = "Estado";
 
             series.IsValueShownAsLabel = true;
-            series.LabelFormat = "{0:0.00}%"; 
-            series.LabelAngle = 0; 
-            series.LabelBackColor = System.Drawing.Color.White; 
-            series.LabelForeColor = System.Drawing.Color.Black; 
+            series.LabelFormat = "{0:0.00}%";
+            series.LabelAngle = 0;
+            series.LabelBackColor = System.Drawing.Color.White;
+            series.LabelForeColor = System.Drawing.Color.Black;
         }
 
         private void EscucharSerial()
@@ -78,7 +78,6 @@ namespace ProyectoMicrocrontroladores2.formularios
                             string estado = partes[0];
                             string valor = partes[1];
 
-                           
                             if (txtEstado.InvokeRequired)
                             {
                                 txtEstado.Invoke(new Action(() => txtEstado.Text = estado));
@@ -109,14 +108,13 @@ namespace ProyectoMicrocrontroladores2.formularios
 
         private void LoadDataGrid()
         {
-            DataTable table = dbConnection.Query("SELECT * FROM DatosMQ2"); 
+            DataTable table = dbConnection.Query("SELECT * FROM DatosMQ2");
             dataGridView1.DataSource = table;
             UpdateChart();
         }
 
         private void UpdateDataGrid()
         {
-            
             if (dataGridView1.InvokeRequired)
             {
                 dataGridView1.Invoke(new Action(() => LoadDataGrid()));
@@ -129,21 +127,19 @@ namespace ProyectoMicrocrontroladores2.formularios
 
         private void LoadDataGridByDate(DateTime date)
         {
-            string query = $"SELECT * FROM DatosMQ2 WHERE Fecha = '{date:yyyy-MM-dd}'"; 
+            string query = $"SELECT * FROM DatosMQ2 WHERE Fecha = '{date:yyyy-MM-dd}'";
             DataTable table = dbConnection.Query(query);
             dataGridView1.DataSource = table;
-            UpdateChart(); 
+            UpdateChart();
         }
 
         private void UpdateChart()
         {
             DateTime selectedDate = dateTimePicker1.Value.Date;
 
-           
-            string query = $"SELECT * FROM DatosMQ2 WHERE Fecha = '{selectedDate:yyyy-MM-dd}'"; 
+            string query = $"SELECT * FROM DatosMQ2 WHERE Fecha = '{selectedDate:yyyy-MM-dd}'";
             DataTable data = dbConnection.Query(query);
 
-           
             var estadoCounts = data.AsEnumerable()
                 .GroupBy(row => row.Field<string>("estado"))
                 .Select(g => new
@@ -174,19 +170,55 @@ namespace ProyectoMicrocrontroladores2.formularios
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
+            // Verifica si el puerto ya está abierto
+            if (Port.IsOpen)
+            {
+                MessageBox.Show("El puerto ya está abierto.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
+                // Intenta abrir el puerto serie
                 Port.Open();
                 MessageBox.Show("Conexión al puerto serie establecida.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Configura la bandera para indicar que el puerto no está cerrado
                 IsClosed = false;
-                Hilo = new Thread(EscucharSerial)
+
+                // Verifica si el hilo ya ha sido creado y está en ejecución
+                if (Hilo == null || !Hilo.IsAlive)
                 {
-                    IsBackground = true
-                };
-                Hilo.Start();
+                    Hilo = new Thread(EscucharSerial)
+                    {
+                        IsBackground = true
+                    };
+                    Hilo.Start();
+                    MessageBox.Show("Hilo de escucha iniciado.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("El hilo de escucha ya está en ejecución.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                // Maneja excepciones de acceso denegado
+                MessageBox.Show($"Acceso denegado al puerto: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (IOException ex)
+            {
+                // Maneja excepciones de entrada/salida
+                MessageBox.Show($"Error de entrada/salida: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException ex)
+            {
+                // Maneja excepciones de argumentos inválidos
+                MessageBox.Show($"Argumento inválido: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
+                // Maneja cualquier otra excepción
                 MessageBox.Show($"Error al abrir el puerto: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
@@ -206,7 +238,6 @@ namespace ProyectoMicrocrontroladores2.formularios
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-           
             string estado = txtEstado.Text;
             string valor = txtGas.Text;
             if (!string.IsNullOrEmpty(estado) && !string.IsNullOrEmpty(valor))
@@ -215,7 +246,7 @@ namespace ProyectoMicrocrontroladores2.formularios
                 if (dbConnection.Ejecutar(query))
                 {
                     MessageBox.Show("Datos guardados en la base de datos.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    UpdateChart(); 
+                    UpdateChart();
                 }
                 else
                 {
