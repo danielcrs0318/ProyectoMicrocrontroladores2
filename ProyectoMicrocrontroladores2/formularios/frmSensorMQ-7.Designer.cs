@@ -58,7 +58,7 @@
             this.txtDatos.Margin = new System.Windows.Forms.Padding(4);
             this.txtDatos.Name = "txtDatos";
             this.txtDatos.Size = new System.Drawing.Size(293, 26);
-            this.txtDatos.TabIndex = 15;
+            this.txtDatos.TabIndex = 7;
             this.txtDatos.TextChanged += new System.EventHandler(this.txtDatos_TextChanged);
             // 
             // btnExit
