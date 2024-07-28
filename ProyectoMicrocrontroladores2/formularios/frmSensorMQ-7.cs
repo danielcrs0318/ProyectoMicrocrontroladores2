@@ -122,7 +122,7 @@ namespace ProyectoMicrocrontroladores2.formularios
         {
             if(txtDatos.Text != string.Empty)
             {
-                ClaseSensorMQ7.DatoCO =Convert.ToInt32(txtDatos.Text);
+                ClaseSensorMQ7.DatoCO = Convert.ToInt32(txtDatos.Text);
             }
         }
 
@@ -168,17 +168,9 @@ namespace ProyectoMicrocrontroladores2.formularios
 
         }
 
-       /* private void txtDatosEstado_TextChanged(object sender, EventArgs e)
+        private void txtDatosEstado_TextChanged(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             
         }
-=======
-            if (txtDatosEstado.Text != string.Empty)
-            {
-                ClaseSensorMQ7.DatoCO = txtDatosEstado.Text;
-            }
-        }*/
->>>>>>> 001a949dd9ddd1f6b68b67430734c2b99d0c70a1
     }
 }
