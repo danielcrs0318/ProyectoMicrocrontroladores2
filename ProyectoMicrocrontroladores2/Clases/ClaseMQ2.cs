@@ -97,7 +97,7 @@ namespace ProyectoMicrocrontroladores2.Clases
         {
             if (!string.IsNullOrEmpty(estado) && !string.IsNullOrEmpty(valor))
             {
-                string query = $"INSERT INTO DatosMQ2 (estado, valor, Fecha) VALUES ('{estado}', '{valor}', '{DateTime.Now:yyyy-MM-dd HH:mm:ss}')";
+                string query = $"INSERT INTO dbo.DatosMQ2 (estado, valor, Fecha) VALUES ('{estado}', '{valor}', '{DateTime.Now:yyyy-MM-dd HH:mm:ss}')";
                 if (dbManager.Ejecutar(query))
                 {
                     MessageBox.Show("Datos guardados en la base de datos.");
@@ -115,18 +115,18 @@ namespace ProyectoMicrocrontroladores2.Clases
 
         public DataTable GetDataByDate(DateTime date)
         {
-            string query = $"SELECT * FROM DatosMQ2 WHERE Fecha = '{date:yyyy-MM-dd}'";
+            string query = $"SELECT * FROM dbo.DatosMQ2 WHERE Fecha = '{date:yyyy-MM-dd}'";
             return dbManager.Query(query);
         }
 
         public DataTable GetAllData()
         {
-            return dbManager.Query("SELECT * FROM DatosMQ2");
+            return dbManager.Query("SELECT * FROM dbo.DatosMQ2");
         }
 
         public DataTable GetChartData(DateTime date)
         {
-            string query = $"SELECT estado, COUNT(*) AS Count FROM DatosMQ2 WHERE Fecha = '{date:yyyy-MM-dd}' GROUP BY estado";
+            string query = $"SELECT estado, COUNT(*) AS Count FROM dbo.DatosMQ2 WHERE Fecha = '{date:yyyy-MM-dd}' GROUP BY estado";
             return dbManager.Query(query);
         }
     }

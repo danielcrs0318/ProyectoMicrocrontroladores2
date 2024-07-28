@@ -72,7 +72,7 @@
             this.btnConnect.TabIndex = 24;
             this.btnConnect.Text = "Conectar";
             this.btnConnect.UseVisualStyleBackColor = true;
-            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click_1);
+           
             // 
             // btnSave
             // 
@@ -193,7 +193,6 @@
             this.Controls.Add(this.txtGas);
             this.Name = "frmMQ2";
             this.Text = "frmMQ2";
-            this.Load += new System.EventHandler(this.frmMQ2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
