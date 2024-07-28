@@ -106,5 +106,10 @@ namespace ProyectoMicrocrontroladores2.formularios
             string valor = txtGas.Text;
             mq2Manager.SaveData(estado, valor);
         }
+
+        private void frmMQ2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
