@@ -36,7 +36,7 @@ namespace ProyectoMicrocrontroladores2.Clases
                 try
                 {
                     conexion.Open();
-                    MessageBox.Show("Conexion estabblecida correctamente");
+                    //MessageBox.Show("Conexion establecida correctamente");
                 }
                 catch (SqlException er)
                 {
