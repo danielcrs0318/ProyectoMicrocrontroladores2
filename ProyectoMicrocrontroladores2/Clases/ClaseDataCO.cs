@@ -16,7 +16,7 @@ namespace ProyectoMicrocrontroladores2.Clases
         {
             listaSensorMQ7 = new DataTable();
             ClaseConexion c = new ClaseConexion();
-            string sql = $"select sh.IDMQ7 as IDsensor,sh.NivelSensor as NivelCO,sh.Estado as Estado from SensorMQ7 as sh ";
+            string sql = $"select sh.IDMQ7 as IDsensor,sh.NivelSensor as NivelCO,sh.FechaHora as FECHA from SensorMQ7 as sh ";
             listaSensorMQ7 = c.Query(sql);
         }
 
