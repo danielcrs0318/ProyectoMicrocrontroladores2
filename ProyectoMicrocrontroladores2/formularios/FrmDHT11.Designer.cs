@@ -47,6 +47,8 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartDHT11)).BeginInit();
             this.SuspendLayout();
@@ -111,6 +113,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(32, 174);
             this.dataGridView1.Name = "dataGridView1";
@@ -141,7 +144,7 @@
             // 
             // btnConetar
             // 
-            this.btnConetar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnConetar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnConetar.Location = new System.Drawing.Point(507, 190);
             this.btnConetar.Name = "btnConetar";
             this.btnConetar.Size = new System.Drawing.Size(119, 37);
@@ -152,7 +155,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnGuardar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnGuardar.Location = new System.Drawing.Point(507, 234);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(119, 37);
@@ -163,7 +166,7 @@
             // 
             // btnDesconectar
             // 
-            this.btnDesconectar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnDesconectar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnDesconectar.Location = new System.Drawing.Point(507, 278);
             this.btnDesconectar.Name = "btnDesconectar";
             this.btnDesconectar.Size = new System.Drawing.Size(119, 37);
@@ -174,7 +177,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnSalir.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSalir.Location = new System.Drawing.Point(507, 322);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(119, 37);
@@ -201,12 +204,31 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "SensorDHT11";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(55, 165);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(128, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Datos Del Sensor DHT11";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(586, 391);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 15;
+            // 
             // FrmDHT11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(639, 404);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.hScrollBar1);
             this.Controls.Add(this.btnSalir);
@@ -247,5 +269,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.HScrollBar hScrollBar1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
