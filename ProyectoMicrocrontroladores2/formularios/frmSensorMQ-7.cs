@@ -168,12 +168,12 @@ namespace ProyectoMicrocrontroladores2.formularios
 
         }
 
-        private void txtDatosEstado_TextChanged(object sender, EventArgs e)
+       /* private void txtDatosEstado_TextChanged(object sender, EventArgs e)
         {
             if (txtDatosEstado.Text != string.Empty)
             {
                 ClaseSensorMQ7.DatoCO = Convert.ToInt32(txtDatosEstado.Text);
             }
-        }
+        }*/
     }
 }
