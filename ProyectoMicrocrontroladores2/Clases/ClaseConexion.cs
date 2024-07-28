@@ -83,6 +83,5 @@ namespace ProyectoMicrocrontroladores2.Clases
                 return false;
             }
         }
-    
     }
 }
