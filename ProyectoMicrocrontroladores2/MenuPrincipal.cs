@@ -48,5 +48,15 @@ namespace ProyectoMicrocrontroladores2
             frmSensorMQ_7.MdiParent = this;
             frmSensorMQ_7.Show();
         }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
