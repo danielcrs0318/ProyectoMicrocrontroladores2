@@ -66,7 +66,7 @@ namespace ProyectoMicrocrontroladores2.formularios
         {
             if (txtHumedad.Text != string.Empty)
             {
-                GuardarDatosDHT11.DatoHumedad = Convert.ToDouble(txtHumedad);
+                GuardarDatosDHT11.DatoHumedad = Convert.ToInt32(txtHumedad);
             }
         }
         //txtcelsius
@@ -74,7 +74,7 @@ namespace ProyectoMicrocrontroladores2.formularios
         {
             if (txtCelsius.Text != string.Empty)
             {
-                GuardarDatosDHT11.DatoCelsius = Convert.ToDouble(txtCelsius);
+                GuardarDatosDHT11.DatoCelsius = Convert.ToInt32(txtCelsius);
             }
         }
 
@@ -83,7 +83,7 @@ namespace ProyectoMicrocrontroladores2.formularios
         {
             if (txtFahrenheit.Text != string.Empty)
             {
-                GuardarDatosDHT11.DatoFahrenheit = Convert.ToDouble(txtFahrenheit);
+                GuardarDatosDHT11.DatoFahrenheit = Convert.ToInt32(txtFahrenheit);
             }
 
         }
@@ -96,9 +96,9 @@ namespace ProyectoMicrocrontroladores2.formularios
                 string[] valores = datos.Split(':');
                 if (valores.Length == 3)
                 {
-                    double humedad = double.Parse(valores[0]);
-                    double celsius = double.Parse(valores[1]);
-                    double fahrenheit = double.Parse(valores[2]);
+                    int humedad = int.Parse(valores[0]);
+                    int celsius = int.Parse(valores[1]);
+                    int fahrenheit = int.Parse(valores[2]);
 
                     Invoke(new Action(() =>
                     {

@@ -107,7 +107,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(221, 20);
             this.toolStripButton1.Text = "ABRIR";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            //this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripSeparator2
             // 
@@ -178,7 +178,7 @@
             this.toolStripLabel4.Name = "toolStripLabel4";
             this.toolStripLabel4.Size = new System.Drawing.Size(221, 20);
             this.toolStripLabel4.Text = "SENSOR DHT11";
-            this.toolStripLabel4.Click += new System.EventHandler(this.toolStripLabel4_Click);
+            //this.toolStripLabel4.Click += new System.EventHandler(this.toolStripLabel4_Click);
             // 
             // toolStripSeparator7
             // 
@@ -196,7 +196,7 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(221, 20);
             this.toolStripButton4.Text = "toolStripButton4";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            //this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripLabel5
             // 

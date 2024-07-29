@@ -9,9 +9,9 @@ namespace ProyectoMicrocrontroladores2.Clases
 {
     internal class GuardarDatosDHT11
     {
-        public double DatoHumedad { get; set; }
-        public double DatoCelsius { get; set; }
-        public double DatoFahrenheit { get; set; }
+        public int DatoHumedad { get; set; }
+        public int DatoCelsius { get; set; }
+        public int DatoFahrenheit { get; set; }
 
         public GuardarDatosDHT11()
         {
@@ -20,7 +20,7 @@ namespace ProyectoMicrocrontroladores2.Clases
             DatoFahrenheit = 0;
         }
 
-         public GuardarDatosDHT11(double humedad, double celsius, double fahrenheit)
+         public GuardarDatosDHT11(int humedad, int celsius, int fahrenheit)
         {
             DatoHumedad = humedad;
             DatoCelsius = celsius;
