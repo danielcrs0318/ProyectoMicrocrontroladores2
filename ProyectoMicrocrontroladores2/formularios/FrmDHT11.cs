@@ -94,31 +94,44 @@ namespace ProyectoMicrocrontroladores2.formularios
         {
             try
             {
-                string datos = _serialPort.ReadLine();
-                string[] valores = datos.Split();
-                if (valores.Length == 3)
+                // Leer la línea de datos del puerto serie
+                string datos = _serialPort.ReadLine().Trim();
+                //TRIM: Elimina Espacios en Blanco al Principio y al Final
+
+                // Usar Invoke para actualizar los controles de la interfaz de usuario en el hilo principal
+                this.Invoke(new MethodInvoker(delegate
                 {
-                    int humedad = int.Parse(valores[0]);
-                    int celsius = int.Parse(valores[1]);
-                    int fahrenheit = int.Parse(valores[2]);
-
-                    Invoke(new Action(() =>
+                    string[] valores = datos.Split(' ');
+                    if (valores.Length >= 3)
                     {
-                        txtHumedad.Text = humedad.ToString();
-                        txtCelsius.Text = celsius.ToString();
-                        txtFahrenheit.Text = fahrenheit.ToString();
-                    }));
+                        try
+                        {
+                            int humedad = int.Parse(valores[0]);
+                            int celsius = int.Parse(valores[1]);
+                            int fahrenheit = int.Parse(valores[2]);
 
-                    GuardarDatosDHT11 guardarDHT11 = new GuardarDatosDHT11();
-                    // Guardar los datos en la base de datos
-                    guardarDHT11.GuardarDHT11();
-                    //cambios
-                }
+                            // Actualiza los controles específicos
+                            txtHumedad.Text = humedad.ToString();
+                            txtCelsius.Text = celsius.ToString();
+                            txtFahrenheit.Text = fahrenheit.ToString();
+
+                            GuardarDatosDHT11 guardarDHT11 = new GuardarDatosDHT11();
+                            guardarDHT11.GuardarDHT11();
+                        }
+                        catch (FormatException)
+                        {
+                            MessageBox.Show("Error en el formato de los datos recibidos.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Formato de datos no reconocido.");
+                    }
+                }));
             }
             catch (Exception ex)
             {
-                // Manejar la excepción (opcionalmente puedes registrar errores)
-                MessageBox.Show("Error al recibir datos: " + ex.Message);
+                MessageBox.Show($"Error al recibir datos: {ex.Message}");
             }
         }
         //ELIMINA PROBLEMAS DE SERIALPORTdaTARECEIVED
