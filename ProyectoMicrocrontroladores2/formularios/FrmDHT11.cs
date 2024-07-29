@@ -122,7 +122,7 @@ namespace ProyectoMicrocrontroladores2.formularios
             }
         }
         //ELIMINA PROBLEMAS DE SERIALPORTdaTARECEIVED
-        private void SerialPort_DataReceived(double humedad, double celsius, double fahrenheit)
+        private void SerialPort_DataReceived(int humedad, int celsius, int fahrenheit)
         {
             throw new NotImplementedException();
         }
