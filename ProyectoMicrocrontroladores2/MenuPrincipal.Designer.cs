@@ -54,6 +54,7 @@
             this.SuspendLayout();
             // 
             // toolStrip1
+            //
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.DimGray;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Left;
