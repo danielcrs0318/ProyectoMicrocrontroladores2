@@ -26,6 +26,7 @@ namespace ProyectoMicrocrontroladores2.formularios
             InitializeChart();
 
         }
+        //
 
         private void btnConetar_Click(object sender, EventArgs e)
         {
