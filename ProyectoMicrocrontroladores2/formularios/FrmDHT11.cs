@@ -95,7 +95,7 @@ namespace ProyectoMicrocrontroladores2.formularios
             try
             {
                 string datos = _serialPort.ReadLine();
-                string[] valores = datos.Split(':');
+                string[] valores = datos.Split();
                 if (valores.Length == 3)
                 {
                     int humedad = int.Parse(valores[0]);
